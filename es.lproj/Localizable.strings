@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  I18n Demo
+
+  Created by Gerson Villanueva on 8/2/16.
+  Copyright © 2016 Gerson Villanueva. All rights reserved.
+*/
+
+HELLO_WORLD="Hola mundo!";
