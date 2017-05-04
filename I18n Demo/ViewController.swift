@@ -23,24 +23,24 @@ class ViewController: UIViewController {
         populateValues()
     }
     
-    var currencyFormatter: NSNumberFormatter {
-        let formatter = NSNumberFormatter()
-        formatter.numberStyle = .CurrencyStyle
+    var currencyFormatter: NumberFormatter {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
         return formatter
     }
     
-    var dateFormatter: NSDateFormatter {
-        let formatter = NSDateFormatter()
-        formatter.dateStyle = .MediumStyle
-        formatter.timeStyle = .MediumStyle
+    var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .medium
         return formatter
     }
     
     
-    private func populateValues() {
+    fileprivate func populateValues() {
         textLabel.text = NSLocalizedString("HELLO_WORLD", comment: "Hello world")
-        currencyLabel.text = currencyFormatter.stringFromNumber(10000)
-        dateLabel.text = dateFormatter.stringFromDate(NSDate())
+        currencyLabel.text = currencyFormatter.string(from: 10000)
+        dateLabel.text = dateFormatter.string(from: Date())
         imageView.image = UIImage(named: "flag")
     }
     
